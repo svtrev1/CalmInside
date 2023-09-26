@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -6,7 +6,7 @@
 /* header */
 
 .nav-link {
-    color: #214E41;    
+    color: #214E41;
     margin-left: 30px;
     margin-right: 30px;
     font-size: 20px;
@@ -25,6 +25,7 @@
 
 .btn {
     background-color: #214E41;
+    color: white;
 }
 
 .btn:hover {
@@ -47,6 +48,85 @@
 /* 1 part */
 
 .first {
-    background-repeat: no-repeat;
+    min-width: 100vw;
+    height: 1020px;
     background-size: cover;
+    background-image: url("images/fon1.png");
+    background-position: center center;
+}
+
+.text1_1 {
+    font-size: 36px;
+    color: #214E41;
+    padding-top: 50%;
+    padding-left: 100px;
+    font-weight: bold;
+}
+
+.text1_2 {
+    font-size: 28px;
+    color: #214E41;
+    padding-left: 100px;
+    text-shadow: 1px 1px 1px whitesmoke, 2px 2px 1px whitesmoke;
+}
+
+.text1_3 {
+    margin-left: 100px;
+    margin-top: 10%;
+}
+
+.form {
+    display: inline-block;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    
+}
+
+.form__field {
+    margin-bottom: 10px;
+    border-radius: 25px;
+    
+}
+
+.form__error {
+    color: red;
+    border-radius: 25px;
+    text-align: left;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+    display: none;
+}
+
+.form input {
+    outline: none;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    border: 0;
+    background-color: #ccc;
+    color: #fff;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: green;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+
+input:invalid:not(:placeholder-shown)+.form__error {
+    display: block;
 }
