@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row{
+    margin: 0;
+}
+
+.build-center{
+    background-image: url("images/our_centers_fon1.png");
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.build-center-offer{
+    width: 25rem;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    color: #214E41;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.first-room{
+    background: #E3EEED;
+    padding-bottom: 5.5rem;
+}
+
+.first-room-title{
+    color: #214E41;
+    font-size: 2.5rem;
+    padding-top: 3.5rem;
+    padding-left: 6rem;
+}
+
+.first-room-line1{
+    margin: 3rem;
+}
+
+.first-room-description{
+    color: #214E41;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.second-room-title{
+    color: #214E41;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.second-room-description{
+    color: #214E41;
+    text-align: right;
+    font-size: 2rem;
+    padding-right: 4rem;
+}
+
+.row2{
+    margin-bottom: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.first-room-line2{
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
+    margin-bottom: 3rem;
+}
