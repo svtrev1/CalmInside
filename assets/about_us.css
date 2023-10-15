@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.green-fon{
+    background-image: url("images/green_fon.png");
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.girl-fon{
+    background-image: url("images/girl.png");
+    background-size: cover;
+    flex-shrink: 0;
+    height: 750px;
+    background-position-x: center;
+}
+
+.row{
+    margin: 0;
+}

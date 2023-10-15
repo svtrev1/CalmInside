@@ -37,6 +37,7 @@
 .first-room-description{
     color: #214E41;
     font-size: 1.5rem;
+    padding: 0;
 }
 
 .second-room-title{
@@ -49,6 +50,7 @@
     color: #214E41;
     text-align: center;
     font-size: 1.5rem;
+    padding: 0;
 }
 
 .row2{
