@@ -1,3 +1,7 @@
+<?php 
+    require('header.php');
+    require('modalRegister.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,28 +18,6 @@
 </head>
 <body>
     
-    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/logo_CI.png" alt="#" height="85">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="main.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="music.html">Музыка</a></li>
-                    <li class="nav-item"><a class="nav-link" href="video.html">Видео-обучение</a></li>
-                    <li class="nav-item"><a class="nav-link" href="our_centers.html">Наши центры</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about_us.html">О нас</a></li>
-                    <button type="button" class="btn btn_header" onclick="document.location='register.html'" ><img src="assets/images/user.png"></button>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <div class="green-fon w-100" style="display: flex; justify-content: center;">
         <div style="text-align: center; display: flex; padding: 1.5rem; padding-top: 7rem; padding-bottom: 7rem;">
             <p style="color: #FFF; font-size: 1.5rem; max-width: 870px; margin: auto;">

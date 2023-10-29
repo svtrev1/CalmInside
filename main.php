@@ -1,3 +1,7 @@
+<?php 
+    require('header.php');
+    require('modalRegister.php');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -9,27 +13,6 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/main.css">
 </head>
-<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="assets/images/logo_CI.png" alt="#" height="85">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="main.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="music.html">Музыка</a></li>
-                <li class="nav-item"><a class="nav-link" href="video.html">Видео-обучение</a></li>
-                <li class="nav-item"><a class="nav-link" href="our_centers.html">Наши центры</a></li>
-                <li class="nav-item"><a class="nav-link" href="about_us.html">О нас</a></li>
-                <button type="button" class="btn btn_header" onclick="document.location='register.html'" ><img src="assets/images/user.png"></button>
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <body>
     <div class="container-fluid first">
