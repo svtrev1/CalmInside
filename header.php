@@ -15,7 +15,7 @@
                     <li class="nav-item"><a class="nav-link" href="video.php">Видео-обучение</a></li>
                     <li class="nav-item"><a class="nav-link" href="our_centers.php">Наши центры</a></li>
                     <li class="nav-item"><a class="nav-link" href="about_us.php">О нас</a></li>
-                    <button type="button" class="btn btn_header btn-outline-success"data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="assets/images/user.png"></button>
+                    <button type="button" class="btn btn_header btn-outline-success"data-bs-toggle="modal" data-bs-target="#modalReg"><img src="assets/images/users.png" width="30rem" height="auto"></button>
                 </ul>
             </div>
         </div>

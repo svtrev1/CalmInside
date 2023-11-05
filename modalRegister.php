@@ -1,5 +1,6 @@
+
 <body>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalReg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -10,7 +11,7 @@
                     <div>
                         <div class="mb-5 mt-5">
                             <div class="row">
-                                <img src="assets/images/logo.png" style="width: 10rem; margin-top: 1rem;"
+                                <img src="assets/images/logo_CI.png" style="width: 10rem; margin-top: 1rem;"
                                     class="mx-auto d-block">
                             </div>
                         </div>
@@ -40,8 +41,7 @@
                 <div class="modal-footer">
                     <div class="row">
                         <div style="text-align: start;">
-                            <a style="color: #214E41;" href="auth.php">Авторизация</a>
-                            <button type="button" class="btn btn-outline-success"data-bs-toggle="modal2" data-bs-target="#exampleModal2">Авторизация</button>
+                            <button type="button" class="btn-outline-success"data-bs-toggle="modal" data-bs-target="#modalAuth">Авторизация</button>
                         </div>
                     </div>
                 </div>

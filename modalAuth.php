@@ -1,5 +1,6 @@
+
 <body>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalAuth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -10,7 +11,7 @@
                     <div>
                         <div class="mb-5 mt-5">
                             <div class="row">
-                                <img src="assets/images/logo.png" style="width: 10rem; margin-top: 1rem;"
+                                <img src="assets/images/logo_CI.png" style="width: 10rem; margin-top: 1rem;"
                                     class="mx-auto d-block">
                             </div>
                         </div>
@@ -35,7 +36,7 @@
                 <div class="modal-footer">
                     <div class="row">
                         <div style="text-align: start;">
-                            <button type="button" class="btn btn-outline-success"data-bs-toggle="modal" data-bs-target="#exampleModal">Регистрация</button>
+                            <button type="button" class="btn-outline-success"data-bs-toggle="modal" data-bs-target="#modalReg">Регистрация</button> 
                         </div>
                     </div>
                 </div>

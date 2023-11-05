@@ -1,5 +1,6 @@
 <?php 
     require('modalRegister.php');
+    require('modalAuth.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
