@@ -1,5 +1,4 @@
 <?php 
-    require('header.php');
     require('modalRegister.php');
 ?>
 <!doctype html>
@@ -13,6 +12,9 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/video.css">
 </head>
+<?php 
+    require('header.php');
+?>
 <body>
 
     <div class="container-fluid first" style="padding-left: 0; padding-right: 0;">

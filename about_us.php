@@ -1,5 +1,4 @@
 <?php 
-    require('header.php');
     require('modalRegister.php');
 ?>
 <!DOCTYPE html>
@@ -16,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
+<?php 
+    require('header.php');
+?>
 <body>
     
     <div class="green-fon w-100" style="display: flex; justify-content: center;">
