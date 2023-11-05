@@ -1,10 +1,10 @@
 <?php 
     require('header.php');
-    // if (empty($_COOKIE['login']))
-    // {
-    //     header('Location: /CalmInside/main.php');
-    //     die();
-    // }
+    if (empty($_COOKIE['login']))
+    {
+        header('Location: /CalmInside/main.php');
+        die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,5 +20,6 @@
     <h1>
         Поздравляем!!! Вы вошли в свой аккаунт, <?=$_COOKIE['login']?>
     </h1>
+    <a href="/CalmInside/logout.php">Выйти</a>
 </body>
 </html>
