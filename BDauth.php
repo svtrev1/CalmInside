@@ -30,6 +30,7 @@ else
     else
     {
         $error = 'Нет такого пользователя';
+        header('Location: /CalmInside/main.php');
         // echo "Нет такого пользователя" . $row['login'] . $row['pass'];
     }
 }

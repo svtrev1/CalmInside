@@ -33,7 +33,7 @@
                         </form>
                     </div>
                 </div>
-                <div style="color: red;"><?=$error?></div>
+                
                 <div class="modal-footer">
                     <div class="row">
                         <div style="text-align: start;">

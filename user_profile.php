@@ -2,7 +2,7 @@
     require('header.php');
     // if (empty($_COOKIE['login']))
     // {
-    //     header('Location: /');
+    //     header('Location: /CalmInside/main.php');
     //     die();
     // }
 ?>
