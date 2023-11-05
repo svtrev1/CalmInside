@@ -1,6 +1,7 @@
 <?php 
 $login = $_POST['login'];
 $pass = $_POST['pass'];
+$error = '';
 
 $conn = mysqli_connect("92.246.214.15:3306", "ais_pashina1855_calminside", "ltTIBfOaNBbbE956PPXXe1ce", "ais_pashina1855_calminside");
 
@@ -21,12 +22,15 @@ else
     {
         while ($row = $result->fetch_assoc())
         {
-            echo "Добро пожаловать" . $row['login'];
+            setcookie('login', $login, 0, "/");
+            header('Location: /CalmInside/user_profile.php');
+            die();
         }
     }
     else
     {
-        echo "Нет такого пользователя" . $row['login'] . $row['pass'];
+        $error = 'Нет такого пользователя';
+        // echo "Нет такого пользователя" . $row['login'] . $row['pass'];
     }
 }
 

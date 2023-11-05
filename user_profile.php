@@ -1,5 +1,10 @@
 <?php 
     require('header.php');
+    // if (empty($_COOKIE['login']))
+    // {
+    //     header('Location: /');
+    //     die();
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +18,7 @@
 </head>
 <body>
     <h1>
-        Поздравляем!!! Вы вошли в свой аккаунт, Имя пользователя!
+        Поздравляем!!! Вы вошли в свой аккаунт, <?=$_COOKIE['login']?>
     </h1>
 </body>
 </html>

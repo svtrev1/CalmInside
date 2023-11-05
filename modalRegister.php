@@ -15,7 +15,7 @@
                                     class="mx-auto d-block">
                             </div>
                         </div>
-                        <form action="reg.php" method="post">
+                        <form action="BDreg.php" method="post">
                             <div class="input-group input-group-sm mx-auto mb-5 w-75 row">
                                 <input type="text" class="justify-content-center form-control reg_place"
                                     aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
