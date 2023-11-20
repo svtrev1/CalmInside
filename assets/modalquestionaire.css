@@ -30,7 +30,7 @@
 
 .slider{
     margin: 3.125rem;
-    margin-top: 1.5rem;
+    margin-top: 50px;
     margin-bottom: 1.5rem;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .serifs{
-    margin-top: 50px;
+    margin-top: -11px;
     padding-left: 6px;
     padding-right: 6px;
     width: 100%-12px;
@@ -88,17 +88,11 @@
 
 
 .for-slider-input{
+    text-align: center;
     margin-top: -40px;
     position: relative;
     color: #AFAFAF; 
     font-size: 1rem;
-}
-
-.for-comment{
-    margin: 3.125rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    width: 30rem;
 }
 
 .comment{
@@ -109,10 +103,12 @@
     border-radius: 1.25rem;
     outline: none;
     color: #fff;
+    resize: none;
 }
 
 .buttons{
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-right: 3.125rem;
     float: right;
 }
 
