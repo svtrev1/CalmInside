@@ -140,7 +140,7 @@
             <div class="container" style="margin: auto;">
                 <p style="font-size: 1.25rem;">Комментарий</p>
                 <div class="for-comment">
-                    <textarea class="comment">
+                    <textarea class="comment" style="min-height: 100px; max-height: 100px;">
 
                     </textarea>
                 </div>
