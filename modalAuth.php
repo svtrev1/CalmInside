@@ -33,7 +33,10 @@
                         </form>
                     </div>
                 </div>
-                
+                <?php
+                    if ($error != '')
+                        echo'<p style="red">=$error</p>';
+                ?>
                 <div class="modal-footer">
                     <div class="row">
                         <div style="text-align: start;">
