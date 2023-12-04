@@ -34,7 +34,9 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Начать медитацию</button>
 
     <?php
+        require('SESSIONmqb.php');
         require('modalquestionnaire.php');
+        session_destroy();
     ?>
 
     

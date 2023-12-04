@@ -19,7 +19,7 @@
                 <?php
                     if (!empty($_COOKIE['login']))
                     {
-                       echo'<button type="button" class="btn btn_header"><a href="user_profile.php"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
+                       echo'<button type="button" class="btn btn_header"><a href="user_profile.php?state=0"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
                     }
                     else 
                     {

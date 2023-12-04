@@ -1,4 +1,4 @@
-<<?php 
+<?php 
     require('modalRegister.php');
     require('modalAuth.php');
 ?>
@@ -65,6 +65,8 @@
 
     </div>
 
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Закончить медитацию</button>
+
     <footer>
         <div class="row" style="background-color: #214E41; margin: 0;">
             <div class="col-1"></div>
@@ -77,6 +79,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    
+    <?php
+        require('SESSIONmqa.php');
+        require('modalquestionnaire.php');
+        session_destroy();
+    ?>
+    
 </body>
 
 </html>
