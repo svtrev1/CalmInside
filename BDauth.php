@@ -12,7 +12,8 @@ if (!$conn)
 
 if (empty($login) || empty($pass))
 {
-    echo "Заполните все поля";
+    $error = 'Заполните все поля';
+    header('Location: /CalmInside/main.php');
 }
 else 
 {
@@ -30,8 +31,8 @@ else
     else
     {
         $error = 'Нет такого пользователя';
-        header('Location: /CalmInside/main.php');
-        // echo "Нет такого пользователя" . $row['login'] . $row['pass'];
+        header('Location: /CalmInsise/main.php');
+       
     }
 }
 
