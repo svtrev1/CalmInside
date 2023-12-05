@@ -1,4 +1,5 @@
 <?php
+
 function setMessage(string $key, string $message): void
 {
     $_SESSION['message'][$key] = $message;
@@ -15,4 +16,5 @@ function getMessage(string $key): string
     unset($_SESSION['message'][$key]);
     return $message;
 }
+
 ?>

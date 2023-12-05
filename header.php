@@ -1,3 +1,4 @@
+
 <header>
     <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -16,17 +17,26 @@
                     <li class="nav-item"><a class="nav-link" href="our_centers.php">Наши центры</a></li>
                     <li class="nav-item"><a class="nav-link" href="about_us.php">О нас</a></li>
 
-                <?php
+                 <?php
+                    if (!empty($_COOKIE['login']))
+                    {
+                        if (($_COOKIE['meditation']) == 1)
+                        {
+                            echo'<li class="nav-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Закончить медитацию</button></li>';
+                        }
+                        else 
+                        {
+                            echo'<li class="nav-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Начать медитацию</button></li>';
+                        }
+                        }
                     if (!empty($_COOKIE['login']))
                     {
                        echo'<button type="button" class="btn btn_header"><a href="user_profile.php?state=0"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
                     }
                     else 
-                
-                    { 
-                        echo'<button type="button" class="btn btn_header btn-outline-success"data-bs-toggle="modal" data-bs-target="#modalReg"><img src="assets/images/users.png" width="30rem" height="auto"></button>';
+                    {
+                        echo'<button type="button" class="btn btn_header"><a href="register_page.php"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
                     }
-                    // echo'<button type="button" class="btn btn_header"><a href="register_page.php"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
                 ?>
 
                 </ul>

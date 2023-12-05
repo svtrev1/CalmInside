@@ -14,11 +14,7 @@ if (!$conn)
 if (empty($login) || empty($email) || empty($pass))
 {
     setMessage('error', "Заполните все поля"); 
-    header('Location: main.php');
-    // echo "<script>$('modalReg').modal('show')</script>";
-    echo "if(window.location.href.indexOf('#myModal') != -1) {
-        $('#myModal').modal('show');
-      }";    
+    header('Location: register_page.php'); 
 }
 else
 {
@@ -26,11 +22,13 @@ else
     
     if ($conn -> query($sql) == TRUE)
     {
-        echo "Успешная регистрация!";
+        setMessage('error', "Успешная регистрация"); 
+        header('Location: auth_page.php'); 
     }
     else
     {
-        echo "Ошибка: " . $conn->error;
+        setMessage('error', "$conn->error"); 
+        header('Location: register_page.php'); 
     }
 }
 

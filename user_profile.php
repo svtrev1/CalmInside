@@ -30,9 +30,6 @@
         Поздравляем!!! Вы вошли в свой аккаунт, <?=$_COOKIE['login']?>
     </h1>
     <a href="/CalmInside/logout.php">Выйти</a>
-    <!-- Кнопка-триггер модального окна -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Начать медитацию</button>
-
     <?php
         require('SESSIONmqb.php');
         require('modalquestionnaire.php');

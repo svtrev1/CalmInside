@@ -1,4 +1,5 @@
 <?php 
+require('error.php');
 $login = $_POST['login'];
 $pass = $_POST['pass'];
 $error = '';
@@ -12,8 +13,8 @@ if (!$conn)
 
 if (empty($login) || empty($pass))
 {
-    $error = 'Заполните все поля';
-    header('Location: /CalmInside/main.php');
+    setMessage('error', "Заполните все поля"); 
+    header('Location: auth_page.php'); 
 }
 else 
 {
@@ -24,15 +25,14 @@ else
         while ($row = $result->fetch_assoc())
         {
             setcookie('login', $login, 0, "/");
-            header('Location: /CalmInside/user_profile.php');
+            header('Location: user_profile.php');
             die();
         }
     }
     else
     {
-        $error = 'Нет такого пользователя';
-        header('Location: /CalmInsise/main.php');
-       
+        setMessage('error', "Нет такого пользователя"); 
+        header('Location: auth_page.php'); 
     }
 }
 
