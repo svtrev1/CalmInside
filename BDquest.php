@@ -14,6 +14,7 @@ $comment = $_GET['comment'];
 $date = date('Y-m-d H:i:s');
 $id = -1;
 $radio = $_GET['radio'];
+$def_or_aft = $_GET['state'];
 
 $sql = mysqli_query($link, "SELECT * FROM `users`");
 while ($result = mysqli_fetch_array($sql)) {
@@ -24,7 +25,7 @@ while ($result = mysqli_fetch_array($sql)) {
 
 
 if($id <> -1){
-    $sql = "INSERT INTO `questionnaire` (id_user, data,  mood, tension, attentiveness, cheerfulness, comment, bef_or_aft) VALUES ($id, '$date', '$radio', '$tension', '$attentiveness', '$cheerfulness', '$comment', '0')";
+    $sql = "INSERT INTO `questionnaire` (id_user, data,  mood, tension, attentiveness, cheerfulness, comment, bef_or_aft) VALUES ($id, '$date', '$radio', '$tension', '$attentiveness', '$cheerfulness', '$comment', '$def_or_aft')";
     if ($link -> query($sql) == TRUE)
     {
         echo "Анкета заполнена успешно!";

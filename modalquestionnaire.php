@@ -9,6 +9,7 @@
         </div>
         <div class="modal-body">
             <form action="BDquest.php" metod="get">
+                <input type="hidden" name="state" value="<?=$_SESSION['def_or_aft']?>"></input>
                 <div>
                     <h5 style="text-align: center;">Настроение</h5>
                     <div class="smiles">
