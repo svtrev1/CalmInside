@@ -22,9 +22,11 @@
                        echo'<button type="button" class="btn btn_header"><a href="user_profile.php"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
                     }
                     else 
-                    {
+                
+                    { 
                         echo'<button type="button" class="btn btn_header btn-outline-success"data-bs-toggle="modal" data-bs-target="#modalReg"><img src="assets/images/users.png" width="30rem" height="auto"></button>';
                     }
+                    // echo'<button type="button" class="btn btn_header"><a href="register_page.php"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
                 ?>
 
                 </ul>

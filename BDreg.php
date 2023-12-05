@@ -1,4 +1,5 @@
-<?php 
+<?php
+require('error.php');
 $email = $_POST['email'];
 $login = $_POST['login'];
 $pass = $_POST['pass'];
@@ -12,7 +13,12 @@ if (!$conn)
 
 if (empty($login) || empty($email) || empty($pass))
 {
-    echo "Заполните все поля";
+    setMessage('error', "Заполните все поля"); 
+    header('Location: main.php');
+    // echo "<script>$('modalReg').modal('show')</script>";
+    echo "if(window.location.href.indexOf('#myModal') != -1) {
+        $('#myModal').modal('show');
+      }";    
 }
 else
 {
