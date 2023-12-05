@@ -31,9 +31,9 @@
     </h1>
     <a href="/CalmInside/logout.php">Выйти</a>
     <?php
-        require('SESSIONmqb.php');
+        $_SESSION['def_or_aft'] = 0;
         require('modalquestionnaire.php');
-        session_destroy();
+        
     ?>
 
     

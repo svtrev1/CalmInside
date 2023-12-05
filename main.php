@@ -1,7 +1,3 @@
-<?php 
-    require('modalRegister.php');
-    require('modalAuth.php');
-?>
 <!doctype html>
 <html lang="en">
 
@@ -15,8 +11,9 @@
     <link rel="stylesheet" href="assets/modalquestionaire.css">
 </head>
 <?php 
-    require('header.php');
-
+   require('header.php');
+   session_start();
+   require('error.php');
 ?>
 <body>
     <div class="container-fluid first">
@@ -148,15 +145,12 @@
         </div>
     </footer>
     <?php
-        require('SESSIONmqb.php');
+        $_SESSION['def_or_aft'] = 0;
         require('modalquestionnaire.php');
-        session_destroy();
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    
 </body>
-
 </html>
