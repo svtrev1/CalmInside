@@ -19,15 +19,28 @@ if (empty($login) || empty($pass))
 }
 else 
 {
-    $result = $conn->query("SELECT * FROM `users` WHERE login = '$login' AND password = '$pass'");
+ 
+    $result = $conn->query("SELECT password FROM `users` WHERE login = '$login'");
 
     if ($result->num_rows > 0)
     {
         while ($row = $result->fetch_assoc())
         {
+            $newpass = $row["password"];
+        }
+        if (password_verify($pass, $newpass))
+        {
+ 
+            $_SESSION['def_or_aft'] = 1;
             setcookie('login', $login, 0, "/");
             header('Location: user_profile.php');
             die();
+         
+        }
+        else
+        {
+            setMessage('error', "Пароль неверный"); 
+            header('Location: auth_page.php'); 
         }
     }
     else

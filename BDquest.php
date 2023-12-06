@@ -31,11 +31,13 @@ if($id <> -1){
         if (($_COOKIE['meditation']) == 1)
         {
             setcookie('meditation',0,0,"/");
+            $_SESSION['def_or_aft'] = 0;
             header('Location: user_profile.php');
         }
         else
         {
             setcookie('meditation',1,0,"/");
+            $_SESSION['def_or_aft'] = 1;
             header('Location: music.php');
         }
     }
