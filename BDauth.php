@@ -1,4 +1,5 @@
 <?php 
+    session_start();
 require('error.php');
 $login = $_POST['login'];
 $pass = $_POST['pass'];

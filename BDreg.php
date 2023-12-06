@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('error.php');
 $email = $_POST['email'];
 $login = $_POST['login'];
@@ -18,17 +19,27 @@ if (empty($login) || empty($email) || empty($pass))
 }
 else
 {
-    $sql = "INSERT INTO `users` (email, login, password) VALUES ('$email','$login','$pass')";
-    
-    if ($conn -> query($sql) == TRUE)
+    $result = $conn->query("SELECT * FROM `users` WHERE email = '$email'");
+
+    if ($result->num_rows > 0)
     {
-        setMessage('error', "Успешная регистрация"); 
-        header('Location: auth_page.php'); 
+        setMessage('error', "Пользователь с этим email уже существует"); 
+        header('Location: register_page.php'); 
     }
     else
     {
-        setMessage('error', "$conn->error"); 
-        header('Location: register_page.php'); 
+        $sql = "INSERT INTO `users` (email, login, password) VALUES ('$email','$login','$pass')";
+        
+        if ($conn -> query($sql) == TRUE)
+        {
+            setMessage('error', "Успешная регистрация"); 
+            header('Location: auth_page.php'); 
+        }
+        else
+        {
+            setMessage('error', "$conn->error"); 
+            header('Location: register_page.php'); 
+        }
     }
 }
 

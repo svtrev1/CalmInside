@@ -11,6 +11,7 @@
 </head>
 <?php 
     require('header.php');
+    session_start();
     require('error.php');
 ?>
 <body style="background-color: beige;">
