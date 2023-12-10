@@ -26,10 +26,14 @@
                         }
                         else 
                         {
-                            echo'<li class="nav-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Начать медитацию</button></li>';
+                            echo'<li class="nav-item"><button type="button" class="btn btn-primary" style="background-color: #43806C" data-bs-toggle="modal" data-bs-target="#questionnaire">Начать медитацию</button></li>';
                         }
                         }
-                    if (!empty($_COOKIE['login']))
+                    if (!empty($_COOKIE['LK']))
+                    {
+                        echo'<button type="button" class="btn" style="background-color: #43806C; position: absolute; right: 0; margin-right: 20px;"><a href="/CalmInside/logout.php"><img src="assets/images/exit.png" width="30rem" height="auto"></a></button>';
+                    }
+                    else if (!empty($_COOKIE['login']))
                     {
                        echo'<button type="button" class="btn btn_header"><a href="user_profile.php?state=0"><img src="assets/images/users.png" width="30rem" height="auto"></a></button>';
                     }

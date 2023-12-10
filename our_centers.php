@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="assets/modalquestionaire.css">
 </head>
 <?php 
+setcookie('LK', '', -1, "/");
    require('header.php');
    require('error.php');
+   
 ?>
 <body>
 

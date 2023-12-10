@@ -12,9 +12,15 @@ $attentiveness = $_GET['attentiveness'];
 $cheerfulness = $_GET['cheerfulness'];
 $comment = $_GET['comment'];
 $date = date('Y-m-d H:i:s');
+$week = date("w", mktime(0,0,0,date("m"),date("d"),date("Y")));
+if ($week == 0)
+{
+    $week = 7;
+}
 $id = -1;
 $radio = $_GET['radio'];
-$def_or_aft = $_GET['state'];
+$def_or_aft = $_COOKIE['meditation'];
+// $def_or_aft = $_GET['state'];
 
 $sql = mysqli_query($link, "SELECT * FROM `users`");
 while ($result = mysqli_fetch_array($sql)) {
@@ -25,19 +31,19 @@ while ($result = mysqli_fetch_array($sql)) {
 
 
 if($id <> -1){
-    $sql = "INSERT INTO `questionnaire` (id_user, data,  mood, tension, attentiveness, cheerfulness, comment, bef_or_aft) VALUES ($id, '$date', '$radio', '$tension', '$attentiveness', '$cheerfulness', '$comment', '$def_or_aft')";
+    $sql = "INSERT INTO `questionnaire` (id_user, data,  mood, tension, attentiveness, cheerfulness, comment, bef_or_aft, day_week) VALUES ($id, '$date', '$radio', '$tension', '$attentiveness', '$cheerfulness', '$comment', '$def_or_aft', '$week')";
     if ($link -> query($sql) == TRUE)
     {
         if (($_COOKIE['meditation']) == 1)
         {
             setcookie('meditation',0,0,"/");
-            $_SESSION['def_or_aft'] = 0;
+         
             header('Location: user_profile.php');
         }
         else
         {
             setcookie('meditation',1,0,"/");
-            $_SESSION['def_or_aft'] = 1;
+        
             header('Location: music.php');
         }
     }

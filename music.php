@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/modalquestionaire.css">
 </head>
 <?php 
+    setcookie('LK', '', -1, "/");
   require('header.php');
   require('error.php');
 ?>
@@ -76,8 +77,8 @@
         </div>
     </footer>
     <?php
-        $_SESSION['def_or_aft'] = 0;
         require('modalquestionnaire.php');
+        
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

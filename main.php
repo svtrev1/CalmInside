@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="assets/modalquestionaire.css">
 </head>
 <?php 
+    setcookie('LK', '', -1, "/");
    require('header.php');
    session_start();
    require('error.php');
+
 ?>
 <body>
     <div class="container-fluid first">
