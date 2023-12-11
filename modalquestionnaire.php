@@ -119,7 +119,7 @@
                         <button class="button-skip" data-bs-dismiss="modal">Пропустить</button>
                     </div>
                     <div class="send">
-                        <button type="submit" class="button-send" data-bs-toggle="modal" >Отправить</button>
+                        <button type="submit" class="button-send"  data-bs-toggle="modal" >Отправить</button>
                     </div>
                 </div>
             </form>

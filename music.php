@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/music.css">
+    <link rel="stylesheet" href="assets/sek.css">
     <link rel="stylesheet" href="assets/modalquestionaire.css">
 </head>
 <?php 
@@ -16,39 +17,74 @@
     $LK = '';
   require('header.php');
   require('error.php');
+    $med = $_COOKIE['meditation'];
 ?>
 <body>
 
     <div class="container-fluid first" style="padding-left: 0; padding-right: 0;">
+    <?php if ($med == 0)
+    {
+        ?>
         <div class="col-lg-6 col-md-6 col-sm-12" style="padding-top: 5rem;">
-            <p style="text-decoration: underline; font-size: 2.25rem; margin-left: 20%; margin-bottom: 80px;">Какая музыка подойдёт для медитаций?</p>
+        <p style="text-decoration: underline; font-size: 2.25rem; margin-left: 20%; margin-bottom: 80px;">Какая музыка подойдёт для медитаций?</p>
+    </div>
+    <div class="row" style="font-size: 1.25rem; font-weight: bold; text-align: center; padding-bottom: 60px; margin-left: 2rem; margin-right: 2rem;">
+        <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
+            <img src="assets/images/music1.png" alt="#" style="margin-bottom: 1.5rem;">
+            <p style="font-size: 1,5rem; color: #214E41;">Звуки природы</p>
         </div>
-        <div class="row" style="font-size: 1.25rem; font-weight: bold; text-align: center; padding-bottom: 60px; margin-left: 2rem; margin-right: 2rem;">
-            <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
-                <img src="assets/images/music1.png" alt="#" style="margin-bottom: 1.5rem;">
-                <p style="font-size: 1,5rem; color: #214E41;">Звуки природы</p>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
-                <img src="assets/images/music2.png" alt="#" style="margin-bottom: 1.5rem;">
-                <p style="font-size: 1,5rem; color: #214E41;">Инструментал</p>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
-                <img src="assets/images/music3.png" alt="#" style="margin-bottom: 1.5rem;">
-                <p style="font-size: 1,5rem; color: #214E41;">Бинауральные ритмы</p>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
-                <img src="assets/images/music4.png" alt="#" style="margin-bottom: 1.5rem;">
-                <p style="font-size: 1,5rem; color: #214E41;">Мантры</p>
-            </div>
+        <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
+            <img src="assets/images/music2.png" alt="#" style="margin-bottom: 1.5rem;">
+            <p style="font-size: 1,5rem; color: #214E41;">Инструментал</p>
         </div>
+        <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
+            <img src="assets/images/music3.png" alt="#" style="margin-bottom: 1.5rem;">
+            <p style="font-size: 1,5rem; color: #214E41;">Бинауральные ритмы</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 50px;">
+            <img src="assets/images/music4.png" alt="#" style="margin-bottom: 1.5rem;">
+            <p style="font-size: 1,5rem; color: #214E41;">Мантры</p>
+        </div>
+    </div>
 
-        <div style="background-color: #5C8060; border: 3px solid #fff; color: #fff;">
-            <p style="margin: 4rem; font-size: 2rem; color: #E3EEED; text-align: center;">У вас бегут мурашки по коже, когда вы слушаете музыку, которая вам нравится или трогает до глубины души? Это и есть эмоциональная сила музыки. Это объясняется тем, что музыка воздействует на области мозга, которые связаны с вознаграждением и положительными эмоциями. В ответ на любимую музыку мозг вырабатывает гормон дофамин, мгновенно влияя на ваше настроение.</p>
-        </div>
+    <div style="background-color: #5C8060; border: 3px solid #fff; color: #fff;">
+        <p style="margin: 4rem; font-size: 2rem; color: #E3EEED; text-align: center;">У вас бегут мурашки по коже, когда вы слушаете музыку, которая вам нравится или трогает до глубины души? Это и есть эмоциональная сила музыки. Это объясняется тем, что музыка воздействует на области мозга, которые связаны с вознаграждением и положительными эмоциями. В ответ на любимую музыку мозг вырабатывает гормон дофамин, мгновенно влияя на ваше настроение.</p>
+    </div>
+    <?php
+    }
+    ?>
+        
 
-        <div class="col-lg-6 col-md-12 col-sm-12" style="padding-top: 5rem;">
-            <p style="text-decoration: underline; font-size: 2.25rem; margin-left: 20%; margin-bottom: 80px;">Лучшие подборки музыки специально для тебя:</p>
+
+
+
+
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12" style="padding-top: 5rem;">
+                <p style="text-decoration: underline; font-size: 2.25rem; margin-left: 20%; margin-bottom: 80px;">Лучшие подборки музыки специально для тебя:</p>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12" style="padding-top: 5rem;">
+            <?php if ($med == 1)
+                 {
+                ?>
+                <div style="background-color: #fff;" id="sekundomers"> 
+                    <div class="time"> 
+                    <span id="minute">00</span> 
+                    <span id="second">00</span> 
+                    <span id="ms">00</span> 
+                    </div> 
+                    
+
+                    <button class="btn btn-primary" id="vpered" onclick="vpered();">Включить таймер</button>
+                    
+                    <button type="button" id="sanovka" onclick="sanovka();" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Закончить медитацию</button>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
         </div>
+        
         <div class="row" style="font-size: 1.25rem; font-weight: bold; text-align: center; padding-bottom: 60px; margin-left: 8rem; margin-right: 8rem;">
             <div class="col-lg-6 col-md-12 col-sm-12" style="margin-bottom: 50px;">
                 <iframe frameborder="0" style="border:none;width:100%;height:450px;" width="100%" height="450" src="https://music.yandex.ru/iframe/playlist/yamusic-top/1072">Слушайте <a href='https://music.yandex.ru/users/yamusic-top/playlists/1072'>Медитация: лучшее</a> — <a href='https://music.yandex.ru/users/yamusic-top'>Яндекс Музыка</a> на Яндекс Музыке</iframe>
@@ -79,9 +115,39 @@
         require('modalquestionnaire.php');
         
     ?>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        var timer = 0; 
+        var timerInterval; 
+        var ms = document.getElementById('ms'); 
+        var second = document.getElementById('second'); 
+        var minute = document.getElementById('minute'); 
+
+        function vpered() { 
+        sanovka(); 
+        timerInterval = setInterval(function() 
+        { 
+            timer += 1/60; 
+            msVal = Math.floor((timer - Math.floor(timer))*100); 
+            secondVal = Math.floor(timer) - Math.floor(timer/60) * 60; 
+            minuteVal = Math.floor(timer/60); 
+            ms.innerHTML = msVal < 10 ? "0" + msVal.toString() : msVal; 
+            second.innerHTML = secondVal < 10 ? "0" + secondVal.toString() : secondVal;
+            minute.innerHTML = minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal;
+        }
+        , 1000/60); 
+        
+        } 
+        function sanovka() { 
+            var min = document.getElementById('minute');
+            console.log(min);
+        // document.cookie = "time=" + (timerr);
+        clearInterval(timerInterval); 
+        }
+    </script>
 </body>
 
 </html>
