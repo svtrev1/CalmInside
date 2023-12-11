@@ -1,5 +1,6 @@
 <?php 
     setcookie('LK', 'yes', 0, "/");
+    $LK = 'yes';
     require('header.php');
     if (empty($_COOKIE['login']))
     {
@@ -128,7 +129,7 @@
                 }
             }
             $value = ceil(($result1 + $result2 + $result3) / 3);
-          
+           
             setcookie('result', $value, 0, "/");
             setcookie('result1', $result1, 0, "/");
             setcookie('result2', $result2, 0, "/");

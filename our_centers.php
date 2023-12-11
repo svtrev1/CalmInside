@@ -16,6 +16,7 @@
 </head>
 <?php 
 setcookie('LK', '', -1, "/");
+$LK = '';
    require('header.php');
    require('error.php');
    

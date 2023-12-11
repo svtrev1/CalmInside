@@ -13,6 +13,7 @@
 </head>
 <?php 
     setcookie('LK', '', -1, "/");
+    $LK = '';
   require('header.php');
   require('error.php');
 ?>
@@ -64,8 +65,6 @@
         </div>
 
     </div>
-
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Закончить медитацию</button>
 
     <footer>
         <div class="row" style="background-color: #214E41; margin: 0;">
