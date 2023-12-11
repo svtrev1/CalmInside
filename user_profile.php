@@ -53,7 +53,13 @@
     <h1 style="text-align: center; color: darkslategray; padding-top: 50px; ">
     Привет, <?=$_COOKIE['login']?>
     </h1>
-        
+    <?php if ($med == 0 && $_COOKIE['min']!='' && $_COOKIE['sec']!='' )
+                {
+                ?>
+                <p style="text-align: center; margin-top: 20px; font-size: 20px;">В прошлый раз вы медитировали:</p>
+
+                <p style="text-align: center; font-size: 30px;"><?php echo $_COOKIE['min'].':'. $_COOKIE['sec']?></p>
+                <?php } ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-6" style="margin-top: 8%;">
