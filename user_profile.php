@@ -134,6 +134,29 @@
         ?>
     </div>
 </div>
+<div style="margin: 30px; ">
+        <div style="width: 600px;">
+            <h4 style="text-align:center">Напряженность/расслабленность</h4>
+            <canvas id="myChart1"></canvas> 
+        </div>
+    </div>
+    <div style="margin: 30px; ">
+        <div style="width: 600px;">
+            <h4 style="text-align:center">Рассеянность/Внимательность</h4>
+            <canvas id="myChart2"></canvas> 
+        </div>
+    </div>
+    <div style="margin: 30px; ">
+        <div style="width: 600px;">
+            <h4 style="text-align:center">Усталось/Бодрость</h4>
+            <canvas id="myChart3"></canvas> 
+        </div>
+    </div>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="grath.js"></script>
+
 <script type="text/javascript">
     let progressBar = document.querySelector(".circular-progress");
     let valueContainer = document.querySelector(".value-container");
