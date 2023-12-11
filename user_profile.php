@@ -23,6 +23,7 @@
     {
         $week = 7;
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -125,7 +126,7 @@
                 }
             }
             $value = ceil(($result1 + $result2 + $result3) / 3);
-            
+          
             setcookie('result', $value, 0, "/");
             setcookie('result1', $result1, 0, "/");
             setcookie('result2', $result2, 0, "/");
@@ -134,6 +135,28 @@
         ?>
     </div>
 </div>
+<!-- <div style="margin: 30px; ">
+    <div style="width: 600px;">
+        <h4 style="text-align:center">Напряженность/расслабленность</h4>
+        <canvas id="myChart1"></canvas> 
+    </div>
+</div>
+<div style="margin: 30px; ">
+    <div style="width: 600px;">
+        <h4 style="text-align:center">Рассеянность/Внимательность</h4>
+        <canvas id="myChart2"></canvas> 
+    </div>
+</div>
+<div style="margin: 30px; ">
+    <div style="width: 600px;">
+        <h4 style="text-align:center">Усталось/Бодрость</h4>
+        <canvas id="myChart3"></canvas> 
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="grath.js"></script> -->
+
 <script type="text/javascript">
     let progressBar = document.querySelector(".circular-progress");
     let valueContainer = document.querySelector(".value-container");
@@ -142,12 +165,14 @@
     let progressEndValue = <?php echo $value; ?>;
     let temp = 0;
     let tempValue = 0;
+    let c =0;
     if (progressEndValue >= 0 && progressEndValue <=100)
     {
         temp = progressEndValue;
     }
     else if (progressEndValue < 0)
     {
+        c = 1;
         temp = progressEndValue;
         progressEndValue = Math.abs(progressEndValue);
     }
@@ -165,16 +190,28 @@
         progressValue++;
         tempValue--;
     }
-    else
+    if (temp == 0)
+    {
+
+    }
+    if (temp > 0)
     {   
         progressValue++;
         tempValue++;
     }
     valueContainer.textContent = `${tempValue}%`;
-    progressBar.style.background = `conic-gradient(
-        #4d5bf9 ${progressValue * 3.6}deg,
-        #cadcff ${progressValue * 3.6}deg
-    )`;
+    if (c == 0)
+    {
+        progressBar.style.background = `conic-gradient(
+        #08a4a7 ${progressValue * 3.6}deg,
+        #cadcff ${progressValue * 3.6}deg)`;
+    }
+    else 
+    {
+        progressBar.style.background = `conic-gradient(
+        #ff0000 ${progressValue * 3.6}deg,
+        #cadcff ${progressValue * 3.6}deg)`;
+    }
     if (progressValue == progressEndValue) {
         clearInterval(progress);
     }

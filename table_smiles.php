@@ -1,5 +1,5 @@
 <?php
-if ($week != 0)
+if ($week > 0)
 {
     if ($week == 7)
         $date = new DateTime('-6 days');

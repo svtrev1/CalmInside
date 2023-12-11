@@ -33,6 +33,7 @@ else
  
             $_SESSION['def_or_aft'] = 1;
             setcookie('login', $login, 0, "/");
+           
             header('Location: user_profile.php');
             die();
          

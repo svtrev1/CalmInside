@@ -20,6 +20,7 @@ if ($week == 0)
 $id = -1;
 $radio = $_GET['radio'];
 $def_or_aft = $_COOKIE['meditation'];
+setcookie('d',$def_or_aft,0,"/");
 // $def_or_aft = $_GET['state'];
 
 $sql = mysqli_query($link, "SELECT * FROM `users`");
@@ -49,7 +50,7 @@ if($id <> -1){
     }
     else
     {
-        // echo "Ошибка: " . $link->error;
+        echo "Ошибка: " . $link->error;
     }
 }
 
