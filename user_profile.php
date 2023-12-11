@@ -25,6 +25,7 @@
     }
     
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,6 +109,7 @@
         </div>
 
     </div>
+    
         <?php
             session_start();
             
@@ -131,31 +133,54 @@
             setcookie('result1', $result1, 0, "/");
             setcookie('result2', $result2, 0, "/");
             setcookie('result3', $result3, 0, "/");
-            require('modalquestionnaire.php');
+            
         ?>
     </div>
-</div>
-<!-- <div style="margin: 30px; ">
-    <div style="width: 600px;">
+
+    <div class="row" style="margin-top: 10%;">
+    
+        <div class="col-4">
+        <div style="margin: 30px; ">
+    <div style="width: 500px;">
         <h4 style="text-align:center">Напряженность/расслабленность</h4>
         <canvas id="myChart1"></canvas> 
     </div>
 </div>
-<div style="margin: 30px; ">
-    <div style="width: 600px;">
-        <h4 style="text-align:center">Рассеянность/Внимательность</h4>
-        <canvas id="myChart2"></canvas> 
-    </div>
+        </div>
+        <div class="col-4" >
+            <div style="margin: 30px; ">
+                <div style="width: 500px;">
+                    <h4 style="text-align:center">Рассеянность/Внимательность</h4>
+                    <canvas id="myChart2"></canvas> 
+            </div>
 </div>
-<div style="margin: 30px; ">
-    <div style="width: 600px;">
-        <h4 style="text-align:center">Усталось/Бодрость</h4>
-        <canvas id="myChart3"></canvas> 
+        </div>
+        <div class="col-4">
+            <div style="margin: 30px; ">
+                <div style="width: 500px;">
+                    <h4 style="text-align:center">Усталось/Бодрость</h4>
+                    <canvas id="myChart3"></canvas> 
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
 
+<?php require('modalquestionnaire.php'); ?>
+
+<footer>
+        <div class="row" style="background-color: #214E41; margin: 0;">
+            <div class="col-1"></div>
+            <div class="col-10" style="text-align: center;">
+                <p style="font-size: 1.5rem; color: #E3EEED; border-bottom: 2px solid #E3EEED;">CalmInside</p>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="grath.js"></script> -->
+<script src="grath.js"></script>
 
 <script type="text/javascript">
     let progressBar = document.querySelector(".circular-progress");

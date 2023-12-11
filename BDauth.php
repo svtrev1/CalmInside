@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    setcookie('meditation',0,0,"/");
 require('error.php');
 $login = $_POST['login'];
 $pass = $_POST['pass'];
