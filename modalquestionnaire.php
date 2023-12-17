@@ -107,14 +107,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="container" style="margin: auto;">
+                <!-- <div class="container" style="margin: auto;">
                     <h5 style="text-align: center;">Комментарий</h5>
                     <div style="margin-top: 30px;">
                         <textarea class="comment" name="comment" value="">
     
                         </textarea>
                     </div>
-                </div>
+                </div> -->
                 <div class="buttons">
                     <div class="skip">
                         <button class="button-skip" data-bs-dismiss="modal">Пропустить</button>
