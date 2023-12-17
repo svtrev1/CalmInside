@@ -49,7 +49,7 @@
     <title>Личный кабинет</title>
 </head>
 <body>
-<div class="container-fluid first" style="padding-left: 0; padding-right: 0;">
+<div class="container-fluid first" style="padding-left: 0; padding-right: 0; height: auto;">
 
     <h1 style="text-align: center; color: darkslategray; padding-top: 50px; ">
     Привет, <?=$_COOKIE['login']?>
@@ -61,11 +61,11 @@
 
                 <p style="text-align: center; font-size: 30px;"><?php echo $_COOKIE['min'].':'. $_COOKIE['sec']?></p>
                 <?php } ?>
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-bottom:10%">
         <div class="row">
             <div class="col-6" style="margin-top: 8%;">
                 <h3 style="text-align: center; margin-bottom: 30px;">Уровень осознанности сегодня</h3>
-                <div class="container" style="display: flex; justify-content: center;">
+                <div class="container" style="margin-bottom: 40%; display: flex; justify-content: center;">
                     <div class="circular-progress">
                         <div class="value-container">0%</div>
                     </div>
@@ -142,44 +142,42 @@
             setcookie('result3', $result3, 0, "/");
             
         ?>
-    
+        </div>
+<p style="border-bottom: 2px solid #214E41; margin-bottom: 0px;"></p>
+<div class="container-fluid first" style="padding-left: 0; padding-right: 0; height: auto;">
     <div class="container-fluid">
-        <div class="row row-cols-auto" style="margin-top: 10%;">
+        <div class="row row-cols-auto" style="justify-content: center;">
             <div class="col">
                 <div style="margin: 30px; ">
-                    <div style="width: 450px;">
-                        <h4 style="text-align:center">Напряженность(-)/Расслабленность(+)</h4>
+                    <div style="width: 400px;">
+                        <h4 style="text-align:center">Напряженность(-)/</h4>
+                        <h4 style="text-align:center">Расслабленность(+)</h4>
                         <canvas id="myChart1"></canvas> 
                     </div>
                 </div>
             </div>
             <div class="col" >
                 <div style="margin: 30px; ">
-                    <div style="width: 450px;">
-                        <h4 style="text-align:center">Рассеянность(-)/Внимательность(+)</h4>
+                    <div style="width: 400px;">
+                        <h4 style="text-align:center">Рассеянность(-)/</h4>
+                        <h4 style="text-align:center">Внимательность(+)</h4>
                         <canvas id="myChart2"></canvas> 
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div style="margin: 30px; ">
-                    <div style="width: 450px;">
-                        <h4 style="text-align:center">Усталось(-)/Бодрость(+)</h4>
+                    <div style="width: 400px;">
+                        <h4 style="text-align:center">Усталось(-)/</h4>
+                        <h4 style="text-align:center">Бодрость(+)</h4>
                         <canvas id="myChart3"></canvas> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+        </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="grath.js"></script>
-    
-
-<?php require('modalquestionnaire.php'); ?>
-
 <footer>
         <div class="row" style="background-color: #214E41; margin: 0;">
             <div class="col-1"></div>
@@ -188,7 +186,15 @@
             </div>
             <div class="col-1"></div>
         </div>
-    </footer>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="grath.js"></script>
+    
+
+<?php require('modalquestionnaire.php'); ?>
+
+
 
 
 
