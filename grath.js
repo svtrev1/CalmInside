@@ -17,6 +17,7 @@ var week = [];
     var attentiveness1 = [];
     var cheerfulness0 = [];
     var cheerfulness1 = [];
+    z
 
     // Создаем новый XMLHttpRequest объект
     var xhr = new XMLHttpRequest();
@@ -67,24 +68,24 @@ var week = [];
     new Chart(ctx1, {
         type: 'line',
         data: {
-        labels: week,
-        datasets: [{
-            label: 'до',
-            data: tension0,
-            borderWidth: 2
-        },{
-            label: 'после',
-            data: tension1,
-            borderWidth: 2
-        }]
+            labels: week,
+            datasets: [{
+                label: 'до',
+                data: tension0,
+                borderWidth: 2
+            },{
+                label: 'после',
+                data: tension1,
+                borderWidth: 2
+            }]
         },
         options: {
-        scales: {
-            yAxes: {
-            min: -100,
-            max: 100
+            scales: {
+                yAxes: {
+                min: -100,
+                max: 100
+                }
             }
-        }
         }
     });
 

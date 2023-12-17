@@ -41,8 +41,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
     
     <link rel="stylesheet" href="assets/modalquestionaire.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    
 
     
     <title>Личный кабинет</title>
@@ -110,7 +111,6 @@
         </div>
 
     </div>
-    
         <?php
             session_start();
             
@@ -136,37 +136,41 @@
             setcookie('result3', $result3, 0, "/");
             
         ?>
-    </div>
-
-    <div class="row" style="margin-top: 10%;">
     
-        <div class="col-4">
-        <div style="margin: 30px; ">
-    <div style="width: 500px;">
-        <h4 style="text-align:center">Напряженность/расслабленность</h4>
-        <canvas id="myChart1"></canvas> 
-    </div>
-</div>
-        </div>
-        <div class="col-4" >
-            <div style="margin: 30px; ">
-                <div style="width: 500px;">
-                    <h4 style="text-align:center">Рассеянность/Внимательность</h4>
-                    <canvas id="myChart2"></canvas> 
+    <div class="container-fluid">
+        <div class="row row-cols-auto" style="margin-top: 10%;">
+            <div class="col">
+                <div style="margin: 30px; ">
+                    <div style="width: 500px;">
+                        <h4 style="text-align:center">Напряженность(-)/Расслабленность(+)</h4>
+                        <canvas id="myChart1"></canvas> 
+                    </div>
+                </div>
             </div>
-</div>
-        </div>
-        <div class="col-4">
-            <div style="margin: 30px; ">
-                <div style="width: 500px;">
-                    <h4 style="text-align:center">Усталось/Бодрость</h4>
-                    <canvas id="myChart3"></canvas> 
+            <div class="col" >
+                <div style="margin: 30px; ">
+                    <div style="width: 500px;">
+                        <h4 style="text-align:center">Рассеянность(-)/Внимательность(+)</h4>
+                        <canvas id="myChart2"></canvas> 
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div style="margin: 30px; ">
+                    <div style="width: 500px;">
+                        <h4 style="text-align:center">Усталось(-)/Бодрость(+)</h4>
+                        <canvas id="myChart3"></canvas> 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="grath.js"></script>
+    
 
 <?php require('modalquestionnaire.php'); ?>
 
@@ -180,8 +184,7 @@
         </div>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="grath.js"></script>
+
 
 <script type="text/javascript">
     let progressBar = document.querySelector(".circular-progress");
