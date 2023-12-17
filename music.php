@@ -71,13 +71,13 @@
                     <div class="time"> 
                     <span id="minute">00</span> 
                     <span id="second">00</span> 
-                    <span id="ms">00</span> 
+                    
                     </div> 
                     
 
                     <button class="btn btn-primary" id="vpered" onclick="vpered();">Включить таймер</button>
                     
-                    <button type="button" id="sanovka" onclick="sanovka();" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Закончить медитацию</button>
+                    <button type="button" id="sanovka" onclick="sanovka1();" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionnaire">Закончить медитацию</button>
                     </div>
                 <?php
                 }
@@ -122,7 +122,7 @@
         <script type="text/javascript">
         var timer = 0; 
         var timerInterval; 
-        var ms = document.getElementById('ms'); 
+     
         var second = document.getElementById('second'); 
         var minute = document.getElementById('minute'); 
 
@@ -131,10 +131,10 @@
         timerInterval = setInterval(function() 
         { 
             timer += 1/60; 
-            msVal = Math.floor((timer - Math.floor(timer))*100); 
+    
             secondVal = Math.floor(timer) - Math.floor(timer/60) * 60; 
             minuteVal = Math.floor(timer/60); 
-            ms.innerHTML = msVal < 10 ? "0" + msVal.toString() : msVal; 
+           
             second.innerHTML = secondVal < 10 ? "0" + secondVal.toString() : secondVal;
             minute.innerHTML = minuteVal < 10 ? "0" + minuteVal.toString() : minuteVal;
         }
@@ -142,11 +142,19 @@
         
         } 
         function sanovka() { 
-            var min = document.getElementById('minute');
-            console.log(min);
-        // document.cookie = "time=" + (timerr);
         clearInterval(timerInterval); 
         }
+        function sanovka1() { 
+            var secondString = second.innerText;
+            
+            document.cookie = "sec=" + secondString;
+            var minString = minute.innerText;
+            
+            document.cookie = "min=" + minString;
+          
+        clearInterval(timerInterval); 
+        }
+        
     </script>
 </body>
 
