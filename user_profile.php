@@ -196,8 +196,6 @@
 
 
 
-
-
 <script type="text/javascript">
     let progressBar = document.querySelector(".circular-progress");
     let valueContainer = document.querySelector(".value-container");
