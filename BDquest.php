@@ -10,7 +10,7 @@ if (!$link)
 $tension = $_GET['tension'];
 $attentiveness = $_GET['attentiveness'];
 $cheerfulness = $_GET['cheerfulness'];
-$comment = $_GET['comment'];
+// $comment = $_GET['comment'];
 $date = date('Y-m-d H:i:s');
 $week = date("w", mktime(0,0,0,date("m"),date("d"),date("Y")));
 if ($week == 0)
@@ -32,7 +32,7 @@ while ($result = mysqli_fetch_array($sql)) {
 
 
 if($id <> -1){
-    $sql = "INSERT INTO `questionnaire` (id_user, data,  mood, tension, attentiveness, cheerfulness, comment, bef_or_aft, day_week) VALUES ($id, '$date', '$radio', '$tension', '$attentiveness', '$cheerfulness', '$comment', '$def_or_aft', '$week')";
+    $sql = "INSERT INTO `questionnaire` (id_user, data,  mood, tension, attentiveness, cheerfulness, bef_or_aft, day_week) VALUES ($id, '$date', '$radio', '$tension', '$attentiveness', '$cheerfulness', '$def_or_aft', '$week')";
     if ($link -> query($sql) == TRUE)
     {
         if (($_COOKIE['meditation']) == 1)
