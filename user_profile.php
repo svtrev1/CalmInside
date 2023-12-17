@@ -147,7 +147,7 @@
         <div class="row row-cols-auto" style="margin-top: 10%;">
             <div class="col">
                 <div style="margin: 30px; ">
-                    <div style="width: 500px;">
+                    <div style="width: 450px;">
                         <h4 style="text-align:center">Напряженность(-)/Расслабленность(+)</h4>
                         <canvas id="myChart1"></canvas> 
                     </div>
@@ -155,7 +155,7 @@
             </div>
             <div class="col" >
                 <div style="margin: 30px; ">
-                    <div style="width: 500px;">
+                    <div style="width: 450px;">
                         <h4 style="text-align:center">Рассеянность(-)/Внимательность(+)</h4>
                         <canvas id="myChart2"></canvas> 
                     </div>
@@ -163,7 +163,7 @@
             </div>
             <div class="col">
                 <div style="margin: 30px; ">
-                    <div style="width: 500px;">
+                    <div style="width: 450px;">
                         <h4 style="text-align:center">Усталось(-)/Бодрость(+)</h4>
                         <canvas id="myChart3"></canvas> 
                     </div>

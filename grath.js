@@ -17,7 +17,7 @@ var week = [];
     var attentiveness1 = [];
     var cheerfulness0 = [];
     var cheerfulness1 = [];
-    z
+    
 
     // Создаем новый XMLHttpRequest объект
     var xhr = new XMLHttpRequest();
