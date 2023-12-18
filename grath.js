@@ -35,11 +35,6 @@ var week = [];
                     attentiveness0.push(Number(xhr.response[j].attentiveness));
                     cheerfulness0.push(Number(xhr.response[j].cheerfulness));
                     i++
-                }else if(i > 0){
-                    tension0.push(null);
-                    attentiveness0.push(null);
-                    cheerfulness0.push(null);
-                    i++
                 }
             }
             else{
@@ -48,14 +43,10 @@ var week = [];
                     attentiveness1.push(Number(xhr.response[j].attentiveness));
                     cheerfulness1.push(Number(xhr.response[j].cheerfulness));
                     k++
-                }else if(k > 0){
-                    tension1.push(null);
-                    attentiveness1.push(null);
-                    cheerfulness1.push(null);
-                    k++
                 }
             }
         }
+        console.log(tension0)
         // console.log(tension0)
         // console.log(tension1)
     }
@@ -80,13 +71,10 @@ var week = [];
         },
         options: {
         scales: {
-            yAxes: {
-            min: -100,
-            max: 100
-            },
-            y: {
-                display: false,
-             }
+            y:{
+                min: -100,
+                max: 100,
+            }
         }
         }
     });
